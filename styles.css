@@ -1,0 +1,131 @@
+/* CSS Variables for easy design customization */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #0078d7;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --container-width: 90%;
+    --max-width: 1200px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+/* Header */
+header {
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .btn-primary {
+    background: #fff;
+    color: var(--primary-color);
+    border: none;
+}
+
+/* Section Layouts */
+.section {
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: var(--max-width);
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Projects */
+.project-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 20px;
+}
+
+/* Contact */
+form input, form textarea, form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--secondary-color);
+    color: #fff;
+}
