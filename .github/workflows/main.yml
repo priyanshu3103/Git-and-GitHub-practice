@@ -1,0 +1,25 @@
+name:  Portfolio Deployment
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build-and-depoly:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: ctions/checkout@v1
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{secrets.ACCESS_KEY_ID}}
+        aws-secret-access-key: ${{secrets.SECRET_ACCESS_KEY_ID}}
+        aws-region: us-east-1
+
+
+    - name: Deploy static web page to s3 bucket
+      run: aws s3 sync . s3://static-portfolio-practice --delete
+
